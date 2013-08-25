@@ -33,14 +33,7 @@ for i in href:
 		text = re.sub(r'\(<A(.*)>(.*)<\/A>\)', "", text, re.I) 
 		date = re.search(r'([a-zA-Z]+) [0-9]{1,2}\, [0-9]{4}', texts, re.I)
 		text = text.replace(" "+date.group(), "")		
-		
-		#text = text.replace("</A>", "")
-		#print "#"+str(count)+"\n"
-		#print "Description : "+text+"\n"
-		#print "Date : "+date.group()+"\n"
-		#print "URL : "+url+"\n"
-		#print "Doc : "+doc+"\n"
-		#	
+				
 		rss += "\n<item>\n<title># : "+str(count)+"</title>\n<pubDate>"+date.group().replace(',','')+"</pubDate>\n<description>"+text+"\nDoc : "+doc+"</description>\n<link>http://"+url+"</link>\n</item>\n"
 		 
 	else:
