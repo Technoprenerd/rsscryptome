@@ -1,0 +1,12 @@
+RSS feed for cryptome.
+
+This python script will output an .xml RSS file. Put this on your server, add a cronjob/crontab to automatically request new content.
+The rss feed is based upon regular expressions, so if www.cryptome.org changes the HTML code, this may not work anymore.
+
+Installation:
+
+1) Chmod +x rsscryptome.py
+2) ./rsscryptome.py
+3) Output RSS format in cryptnews.xml
+4) Put cryptnews on your server, put URL in rss reader.
+5) Done, eat some peanuts :-)
